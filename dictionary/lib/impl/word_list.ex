@@ -7,7 +7,8 @@ defmodule Dictionary.Impl.WordList do
 
     # # module attribute
     # @word_list "assets/words.txt"
-    "assets/words.txt"
+    "../../assets/words.txt"
+      |> Path.expand(__DIR__)
       |> File.read!
       |> String.split(~r/\n/, trim: true)
 
